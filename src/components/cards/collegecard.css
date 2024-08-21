@@ -1,0 +1,65 @@
+.college-card {
+    width: 20rem; /* Fixed width for uniformity */
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid #ddd; /* Light border for a subtle frame */
+    border-radius: 0.75rem; /* Slightly more rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden; /* Ensures content does not overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    margin: 1rem; /* Margin around each card */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+  }
+  
+  .college-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .college-card-image {
+    width: 100%; /* Full width image */
+    height: 10rem; /* Fixed height for image */
+    object-fit: cover; /* Cover the area without distortion */
+  }
+  
+  .college-card-content {
+    padding: 1.25rem; /* Padding inside the card for better spacing */
+    flex: 1; /* Flex-grow to take remaining space */
+  }
+  
+  .college-card-title, .college-card-address {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipses for overflow text */
+  }
+  
+  .college-card-title {
+    font-size: 1.25rem; /* Slightly smaller font size */
+    font-weight: 700; /* Bold title */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 0.5rem; /* Space below title */
+  }
+  
+  .college-card-address {
+    font-size: 0.875rem; /* Smaller font size for address */
+    color: #555; /* Lighter color for address */
+    margin: 0; /* No margin */
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: flex-end; /* Align footer content to the end */
+    margin-top: 1rem; /* Space above the footer */
+  }
+  
+  .card-footer a {
+    text-decoration: none; /* Remove underline */
+    color: #0070f3; /* Blue color for the link */
+    font-weight: 600; /* Bold text */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  .card-footer a:hover {
+    color: #005bb5; /* Darker blue on hover */
+  }
+  

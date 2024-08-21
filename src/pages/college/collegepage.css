@@ -1,0 +1,34 @@
+
+
+.college-search-message {
+  text-align: center;
+  margin-top: 7vh;
+  margin-bottom: 1vh;
+}
+
+.college-search-text {
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #333; /* Dark color for better readability */
+  margin: 0;
+}
+
+.college-search-highlight {
+  color: #146ef5; /* Highlight color */
+}
+
+
+.search-div{
+  display: flex;
+  justify-content: center;
+}
+
+
+.college-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+
+}

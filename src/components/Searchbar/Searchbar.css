@@ -1,0 +1,64 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adjust space as needed */
+    width: 100%; /* Make the container full-width for a broader look */
+    max-width: 600px; /* Set a maximum width for better control */
+  }
+  
+  .search-input, .search-button {
+    height: 50px; /* Ensure both input and button have the same height */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners for both */
+    font-size: 1rem; /* Same font size for consistency */
+  }
+  
+  .search-input {
+    flex: 1; /* Make the input field take up remaining space */
+    padding: 0 12px; /* Adjust padding for alignment */
+    border-radius: 8px 0 0 8px; /* Rounded corners on the left */
+    margin-right: 0; /* Remove margin since it’s not needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .search-input:focus {
+    border-color: #0070f3; /* Border color on focus */
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-button {
+    background-color: #0070f3;
+    color: #fff;
+    padding: 0 20px; /* Padding for alignment */
+    border: none;
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .search-button:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
