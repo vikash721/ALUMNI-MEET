@@ -1,20 +1,29 @@
 import './App.css';
 import College from './pages/college/Collegepage';
 import Home from './pages/homepage/Home';
-// import { Routes, Route } from 'react-router-dom';
+import SignUpPage from './pages/signup/SingnUpPage';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/pages/home",
+      element: <Home />,
+    },
+    {
+      path: "/pages/college",
+      element: <College />,
+    },
+    {
+      path: "/signup",
+      element: <SignUpPage />,
+    },
+  ]);
+
   return (
-    // <Routes>
-    //   <Route path="/" element={<Home />} />
-    //   <Route path="/college" element={<College />} />
-    // </Routes>
-
-
-    <>
-    {/* <Home/> */}
-    <College/>
-    </>
+    <div className='app-container'>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

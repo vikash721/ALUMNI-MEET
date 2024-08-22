@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import Logo from "../../assets/logo.png";
-import Signin from '../Signupmodal/Signup';
+import Signin from '../Signup_modal/Signup';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -28,21 +29,22 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-left">
                         <ul className="nav-links">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#">Colleges</a></li>
-                            <li><a href="#alumni">Alumni</a></li>
-                            <li><a href="#resources">Events</a></li>
+                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/home">Home</NavLink></li>
+                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/college">Colleges</NavLink></li>
+                        
+                            <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/alumni">Alumni</NavLink></li>
+                            <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/events">Events</NavLink></li>
                             <li
                                 className="dropdown"
                                 onMouseEnter={toggleDropdown}
                                 onMouseLeave={toggleDropdown}
                             >
-                                <a href="#learn">Learn</a>
+                                <span className="dropdown-trigger">Learn</span>
                                 {isDropdownOpen && (
                                     <ul className="dropdown-menu">
-                                        <li><a href="#tutorials">Tutorials</a></li>
-                                        <li><a href="#webinars">Webinars</a></li>
-                                        <li><a href="#guides">Guides</a></li>
+                                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/webinars">Webinars</NavLink></li>
+                                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="Webinars/guides">Guides</NavLink></li>
+                                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="Webinars/tutorials">Tutorials</NavLink></li>
                                     </ul>
                                 )}
                             </li>

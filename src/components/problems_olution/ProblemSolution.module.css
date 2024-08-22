@@ -1,0 +1,115 @@
+/* Container for the whole section */
+.presentationContainer {
+    width: 100%;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f8f8, #ffffff);
+}
+
+/* Hero Section */
+.heroSection {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #0070f3, #00b4d8);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.heroSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.heroSection p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Feature Icons Section */
+.featuresSection {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.featureItem {
+    text-align: center;
+    max-width: 200px;
+}
+
+.featureItem img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.featureItem h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #0070f3;
+}
+
+.featureItem p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Connection Visualization */
+.connectionSection {
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.connectionSection h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #0070f3;
+}
+
+.connectionSteps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.connectionStep {
+    max-width: 150px;
+    text-align: center;
+}
+
+.connectionStep img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.connectionStep p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/*CTA Button */
+/* .ctaButton {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ctaButton:hover {
+    background-color: #005bb5;
+} */ 
