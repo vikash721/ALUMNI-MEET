@@ -58,7 +58,7 @@ const AlumniLogin = ({ closeModal }) => {
                     <div className={styles.customModal}>
                         <div className={styles.customModalHeader}>
                             
-                            <header >Alumni Login </header>
+                            <header className={styles.header} >Alumni Login </header>
                             <span className={styles.customModalClose} onClick={closeModal}>&times;</span>
                         </div>
                         <div className={styles.customModalContent}>

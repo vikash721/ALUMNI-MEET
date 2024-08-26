@@ -75,23 +75,23 @@ const CollegeSignup = ({ closeModal }) => {
                                 <div className={styles.customField}>
                                     <input
                                         type="text"
-                                        placeholder="First Name"
+                                        placeholder="College Full Name"
                                         className={styles.customInput}
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
                                         required
-                                        autoComplete="given-name" // Updated for better autofill support
+                                        
                                     />
                                 </div>
                                 <div className={styles.customField}>
                                     <input
                                         type="text"
-                                        placeholder="Last Name"
+                                        placeholder="College Short Name (for ex: IIT)"
                                         className={styles.customInput}
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         required
-                                        autoComplete="family-name" // Updated for better autofill support
+                                        
                                     />
                                 </div>
                                 <div className={styles.customField}>

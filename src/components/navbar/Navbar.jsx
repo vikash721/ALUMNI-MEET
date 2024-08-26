@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import Logo from "../../assets/logo.png";
-import Signin from '../authantication/Signup_modal/Signup';
+// import Signin from '../authantication/Signup_modal/Signup';
 import { NavLink } from 'react-router-dom';
+import UserTypeModal from '../authantication/usertype/user_type/UserType';
 
 const Navbar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -22,6 +23,7 @@ const Navbar = () => {
 
     return (
         <>
+        
             <nav className="navbar">
                 <div className="nav-container">
                     <div className='logo-container'>
@@ -58,7 +60,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {isModalVisible && <Signin closeModal={closeModal} />}
+            {isModalVisible && <UserTypeModal closeModal={closeModal} />}
         </>
     );
 };

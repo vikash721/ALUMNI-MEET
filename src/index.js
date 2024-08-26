@@ -10,7 +10,7 @@ import TestUserTypeModal from './Testing/TEST';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    {/* <App /> */}
-    <TestUserTypeModal/>
+    <App />
+    {/* <TestUserTypeModal/> */}
   </>
 );

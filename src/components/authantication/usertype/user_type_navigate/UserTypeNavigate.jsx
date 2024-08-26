@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import UserTypeModal from "../components/authantication/usertype/user_type/UserType"; // Ensure correct path
+import UserTypeModal from '../user_type/UserType'; // Ensure the correct path to the UserTypeModal component
+import StudentLogin from '../../student_auth/student_login/StudentLogin';
+import AlumniLogin from '../../alumni_auth/alumni_login/AlumniLogin';
+import CollegeLogin from '../../college_auth/college_login'; // Adjust the path if needed
 
 const TestUserTypeModal = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -18,6 +21,19 @@ const TestUserTypeModal = () => {
     setIsModalVisible(false);
   };
 
+  const renderContent = () => {
+    switch (selectedUserType) {
+      case 'student':
+        return <StudentLogin closeModal={handleCloseModal} />;
+      case 'alumni':
+        return <AlumniLogin closeModal={handleCloseModal} />;
+      case 'college':
+        return <CollegeLogin closeModal={handleCloseModal} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div>
       <h1>Test User Type Modal</h1>
@@ -28,12 +44,9 @@ const TestUserTypeModal = () => {
           closeModal={handleCloseModal}
           onSelectUserType={handleUserTypeSelect}
         />
-        
       )}
 
-      {selectedUserType && (
-        <p>You selected: {selectedUserType}</p>
-      )}
+      {renderContent()}
     </div>
   );
 };

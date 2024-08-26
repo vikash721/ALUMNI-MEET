@@ -9,6 +9,7 @@ import CenteredContent from '../../components/centerd_component/CenteredContent'
 import EventSlider from '../../components/event_slider/EventSlider';
 import ProblemSolution from '../../components/problems_olution/ProblemSolution';
 import NavBarOnLogin from '../../components/navbar_on_login/NavBarOnLogin';
+import UserTypeModal from "../../components/authantication/usertype/user_type/UserType";
 
 const Home = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -24,6 +25,7 @@ const Home = () => {
   return (
     <>
       <NavBarOnLogin/>
+      
 
           <CenteredContent>
           <div className='welcome-container'>
@@ -63,7 +65,7 @@ const Home = () => {
           </div>
        
 
-      {isModalVisible && <Signin closeModal={closeModal} />}
+      {isModalVisible && <UserTypeModal closeModal={closeModal} />}
       
       </CenteredContent>
       <Footer />
