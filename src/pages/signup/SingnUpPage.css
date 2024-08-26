@@ -1,0 +1,93 @@
+.main-parent{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main-div{
+    
+    width: 65vw;
+
+
+    display: flex;
+    flex-direction: column;
+
+}
+.cards-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+.welcome-container {
+    text-align: center;
+    margin-bottom: 10vh; 
+    margin-top: 7vh; 
+  }
+  
+  .welcome-text {
+    font-size: 4rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #333; /* Dark color for better readability */
+    margin: 0;
+    padding: 0.8rem;
+    background-color: #fff; /* Background color for better contrast */
+    
+  }
+  
+  .welcome-paragraph {
+    font-size: 1.2rem; 
+    color: #555; 
+    margin: 0;
+    padding: 0 1.5rem; 
+  }
+
+  .alumnimeet-text{
+    color: #146ef5;
+  }
+
+
+  .connect-container {
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 10vh;
+
+  }
+  
+  .connect-button {
+    background-color: #0070f3; 
+    color: #fff; 
+    padding: 15px 30px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .connect-button:hover {
+    background-color: #005bb5; /* Darker shade for hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    cursor: pointer;
+  }
+  
+  .connect-button:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+  }
+  
+  .EventSlider{
+    margin: 7rem;
+  }

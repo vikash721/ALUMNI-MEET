@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Navbar from '../../components/navbar/Navbar';
+// import Navbar from '../../components/navbar/Navbar';
 import './SingnUpPage.css';
 import Card from '../../components/cards/Card';
 import cardData from '../../data/Carddata';
 import Footer from '../../components/footer/Footer';
-import Signin from '../../components/Signup_modal/Signup';
+import Signin from '../../components/authantication/Signup_modal/Signup';
 import CenteredContent from '../../components/centerd_component/CenteredContent';
 import EventSlider from '../../components/event_slider/EventSlider';
 import ProblemSolution from '../../components/problems_olution/ProblemSolution';
+import NavBarOnLogin from '../../components/navbar_on_login/NavBarOnLogin';
 
 const Home = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -22,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      <NavBarOnLogin/>
 
           <CenteredContent>
           <div className='welcome-container'>

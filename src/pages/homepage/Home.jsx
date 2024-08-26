@@ -4,7 +4,7 @@ import './home.css';
 import Card from '../../components/cards/Card';
 import cardData from '../../data/Carddata';
 import Footer from '../../components/footer/Footer';
-import Signin from '../../components/Signup_modal/Signup';
+import Signin from '../../components/authantication/Signup_modal/Signup';
 import CenteredContent from '../../components/centerd_component/CenteredContent';
 import EventSlider from '../../components/event_slider/EventSlider';
 import ProblemSolution from '../../components/problems_olution/ProblemSolution';

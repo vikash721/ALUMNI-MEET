@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import Logo from "../../assets/logo.png";
-import Signin from '../Signup_modal/Signup';
+import Signin from '../authantication/Signup_modal/Signup';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {

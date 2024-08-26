@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Styles from './NavBarOnLogin.module.css';
 import Logo from "../../assets/logo.png";
-import Signin from '../Signup_modal/Signup';
+import Signin from '../authantication/Signup_modal/Signup';
 
 const NavBarOnLogin = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
