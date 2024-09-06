@@ -1,9 +1,10 @@
 const collegeData = [
     {
-      name: "Satyug Darsahn Institute of Engineering and Technology (SDIET)",
+      name: "Satyug Darshan Institute of Engineering and Technology (SDIET)",
       address: "Faridabad and Delhi, NCR. ",
       imageSrc: "https://images.shiksha.com/mediadata/images/1492081894phpKZRaiW.jpeg",
       altText: "Satyug Darsahn Institute of Engineering and Technology"
+      
     },
     {
       name: "Indian Institute of Technology (IIT) Delhi",

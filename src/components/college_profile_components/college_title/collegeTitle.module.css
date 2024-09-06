@@ -1,0 +1,36 @@
+.collegeTitleContainer {
+  margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .collegeLogo {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover; /* Ensures the logo fits nicely within the circle */
+  }
+  
+  .collegeDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .collegeName {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .collegeInfo {
+    font-size: 16px;
+    color: #777777;
+    margin-top: 5px;
+    margin-left: 1rem;
+  }
+  

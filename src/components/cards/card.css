@@ -1,5 +1,5 @@
 .card-container {
-  max-width: 24rem; /* max-w-sm */
+  max-width: 30%; /* max-w-sm */
   background-color: #ffffff; /* bg-white */
   border: 1px solid #e5e7eb; /* border-gray-200 */
   border-radius: 0.5rem; /* rounded-lg */

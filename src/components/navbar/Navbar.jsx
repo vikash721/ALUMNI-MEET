@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import Logo from "../../assets/logo.png";
-// import Signin from '../authantication/Signup_modal/Signup';
 import { NavLink } from 'react-router-dom';
 import UserTypeModal from '../authantication/usertype/user_type/UserType';
+import { FaUserCircle } from 'react-icons/fa'; // Import FontAwesome user icon
 
 const Navbar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
     };
 
-    const handleGetStartedClick = () => {
-        setIsModalVisible(true);
+    const toggleUserDropdown = () => {
+        setUserDropdownOpen(!isUserDropdownOpen);
     };
 
     const closeModal = () => {
@@ -23,7 +24,6 @@ const Navbar = () => {
 
     return (
         <>
-        
             <nav className="navbar">
                 <div className="nav-container">
                     <div className='logo-container'>
@@ -31,11 +31,10 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-left">
                         <ul className="nav-links">
-                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/home">Home</NavLink></li>
-                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/college">Colleges</NavLink></li>
-                        
-                            <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/alumni">Alumni</NavLink></li>
-                            <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/events">Events</NavLink></li>
+                            <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/home">Home</NavLink></li>
+                            <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/college">Colleges</NavLink></li>
+                            <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/alumni">Alumni</NavLink></li>
+                            <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/events">Events</NavLink></li>
                             <li
                                 className="dropdown"
                                 onMouseEnter={toggleDropdown}
@@ -44,18 +43,25 @@ const Navbar = () => {
                                 <span className="dropdown-trigger">Learn</span>
                                 {isDropdownOpen && (
                                     <ul className="dropdown-menu">
-                                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="/pages/webinars">Webinars</NavLink></li>
-                                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="Webinars/guides">Guides</NavLink></li>
-                                        <li><NavLink className = {(e)=> {return e.isActive?"activelink": ""}} to="Webinars/tutorials">Tutorials</NavLink></li>
+                                        <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/webinars">Webinars</NavLink></li>
+                                        <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/guides">Guides</NavLink></li>
+                                        <li><NavLink className={(e) => e.isActive ? "activelink" : ""} to="/pages/tutorials">Tutorials</NavLink></li>
                                     </ul>
                                 )}
                             </li>
                         </ul>
                     </div>
                     <div className="navbar-right">
-                        <button className="get-started-btn" onClick={handleGetStartedClick}>
-                            Get Started — it’s free
-                        </button>
+                        <div className="user-dropdown-container" onClick={toggleUserDropdown}>
+                            <FaUserCircle className="user-icon" size={28} />
+                            {isUserDropdownOpen && (
+                                <ul className="user-dropdown-menu">
+                                    <li><NavLink to="/profile">My Profile</NavLink></li>
+                                    <li><NavLink to="/settings">Settings</NavLink></li>
+                                    <li><NavLink to="/logout">Logout</NavLink></li>
+                                </ul>
+                            )}
+                        </div>
                     </div>
                 </div>
             </nav>

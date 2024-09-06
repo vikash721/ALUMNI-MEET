@@ -1,0 +1,52 @@
+.container {
+    padding: 2rem 1rem;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 100%; /* Full width of the container */
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+/* Ensure image inside the card fits */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Customize Swiper's navigation buttons */
+.swiper-button-prev, .swiper-button-next {
+    color: #333;
+}
+
+/* Customize Swiper's pagination dots */
+.swiper-pagination-bullet {
+    background-color: #333;
+}

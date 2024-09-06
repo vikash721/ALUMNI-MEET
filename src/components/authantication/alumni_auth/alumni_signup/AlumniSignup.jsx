@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Ensure axios is imported
 import styles from './AlumniSignup.module.css';
 import Notification from '../../notification/Notificationmodal'; // Adjust the import path
 import AlumniLogin from '../alumni_login/AlumniLogin';
-
 
 const AlumniSignup = ({ closeModal }) => {
     const [firstName, setFirstName] = useState('');
@@ -14,9 +14,10 @@ const AlumniSignup = ({ closeModal }) => {
     const [notification, setNotification] = useState('');
     const [showLogin, setShowLogin] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Validate inputs
         if (!firstName || !lastName || !email || !password || !confirmPassword) {
             setError('Please fill out all fields.');
             return;
@@ -34,8 +35,31 @@ const AlumniSignup = ({ closeModal }) => {
 
         setError('');
         setNotification('Signup successful!');
-        // Handle successful form submission here
-        // closeModal(); // Close the modal on successful signup (if desired)
+
+        // URL to your Google Apps Script Web App
+        const url = 'https://script.google.com/macros/s/AKfycbwFqVga6nvMXm80yNOx6Kl3Isi08U0pmwtGOGP-j0siejTB-wzqYAv6VkPE15JG3LiXaQ/exec';
+
+        // Prepare data to send
+        const data = new URLSearchParams({
+            firstname: firstName,
+            lastname: lastName,
+            email: email,
+            password: password
+        });
+
+        try {
+            const response = await axios.post(url, data, {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded' // Ensure the correct content type
+                }
+            });
+            console.log('Response:', response.data);
+            setNotification('Signup successful!');
+            resetForm(); // Reset the form fields
+        } catch (error) {
+            console.error('Error occurred:', error.response || error.message || error);
+            setError('An error occurred while submitting the form.');
+        }
     };
 
     const validateEmail = (email) => {
@@ -49,6 +73,14 @@ const AlumniSignup = ({ closeModal }) => {
 
     const handleLoginClick = () => {
         setShowLogin(true);
+    };
+
+    const resetForm = () => {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
     };
 
     return (
@@ -80,7 +112,7 @@ const AlumniSignup = ({ closeModal }) => {
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
                                         required
-                                        autoComplete="given-name" // Updated for better autofill support
+                                        autoComplete="given-name"
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -91,7 +123,7 @@ const AlumniSignup = ({ closeModal }) => {
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         required
-                                        autoComplete="family-name" // Updated for better autofill support
+                                        autoComplete="family-name"
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -102,7 +134,7 @@ const AlumniSignup = ({ closeModal }) => {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         required
-                                        autoComplete="email" // Standard value for email fields
+                                        autoComplete="email"
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -113,7 +145,7 @@ const AlumniSignup = ({ closeModal }) => {
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         required
-                                        autoComplete="new-password" // Standard value for new passwords
+                                        autoComplete="new-password"
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -124,7 +156,7 @@ const AlumniSignup = ({ closeModal }) => {
                                         value={confirmPassword}
                                         onChange={(e) => setConfirmPassword(e.target.value)}
                                         required
-                                        autoComplete="new-password" // Same as above
+                                        autoComplete="new-password"
                                     />
                                 </div>
                                 <div className={styles.customField}>

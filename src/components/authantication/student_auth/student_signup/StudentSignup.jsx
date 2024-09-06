@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import Axios
 import styles from './StudentSignup.module.css';
 import Notification from '../../notification/Notificationmodal'; // Adjust the import path
-// import Login from '../login/Login'; // Adjust the import path
 import StudentLogin from '../student_login/StudentLogin';
 
 const StudentSignup = ({ closeModal }) => {
@@ -14,7 +14,7 @@ const StudentSignup = ({ closeModal }) => {
     const [notification, setNotification] = useState('');
     const [showLogin, setShowLogin] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!firstName || !lastName || !email || !password || !confirmPassword) {
@@ -33,9 +33,27 @@ const StudentSignup = ({ closeModal }) => {
         }
 
         setError('');
-        setNotification('Signup successful!');
-        // Handle successful form submission here
-        // closeModal(); // Close the modal on successful signup (if desired)
+        setNotification('Submitting form...');
+
+        // URL to your Google Apps Script Web App
+        // const url = 'https://script.google.com/macros/s/AKfycbwOEOqsLzTq3GZm8mr6LlowrYqJJUxg8vv8Fo_hFDg_pTBVaKJTdmYu9YA_2sCcqmiQRg/exec';
+        const url = 'https://script.google.com/macros/s/AKfycbzA4qdpIHqlAOBoL04-SvaNhjTvl5d8j_LXNiwXscfzffbYzoE3qhjXhoG8N6Z5Egu0hg/exec';
+
+        // Prepare data to send
+        const formData = new FormData();
+        formData.append('firstname', firstName);
+        formData.append('lastname', lastName);
+        formData.append('email', email);
+        formData.append('password', password);
+
+        try {
+            await axios.post(url, formData);
+            setNotification('Signup successful!');
+            resetForm(); // Reset the form fields
+        } catch (error) {
+            setError('An error occurred while submitting the form.');
+            console.error('Error:', error);
+        }
     };
 
     const validateEmail = (email) => {
@@ -51,6 +69,14 @@ const StudentSignup = ({ closeModal }) => {
         setShowLogin(true);
     };
 
+    const resetForm = () => {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
+    };
+
     return (
         <>
             {notification && (
@@ -58,7 +84,6 @@ const StudentSignup = ({ closeModal }) => {
                     message={notification}
                     type="notification-success"
                     onClose={handleNotificationClose}
-                    
                 />
             )}
             {showLogin ? (
@@ -81,7 +106,6 @@ const StudentSignup = ({ closeModal }) => {
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
                                         required
-                                        autoComplete="given-name" // Updated for better autofill support
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -92,7 +116,6 @@ const StudentSignup = ({ closeModal }) => {
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         required
-                                        autoComplete="family-name" // Updated for better autofill support
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -103,7 +126,6 @@ const StudentSignup = ({ closeModal }) => {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         required
-                                        autoComplete="email" // Standard value for email fields
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -114,7 +136,6 @@ const StudentSignup = ({ closeModal }) => {
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         required
-                                        autoComplete="new-password" // Standard value for new passwords
                                     />
                                 </div>
                                 <div className={styles.customField}>
@@ -125,7 +146,6 @@ const StudentSignup = ({ closeModal }) => {
                                         value={confirmPassword}
                                         onChange={(e) => setConfirmPassword(e.target.value)}
                                         required
-                                        autoComplete="new-password" // Same as above
                                     />
                                 </div>
                                 <div className={styles.customField}>

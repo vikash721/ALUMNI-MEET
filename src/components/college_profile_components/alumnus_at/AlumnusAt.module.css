@@ -1,0 +1,27 @@
+.container {
+   
+    padding: 40px 20px;
+}
+
+.heading {
+    font-size: 28px;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    
+}
+
+.companyLogo {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.companyLogo:hover {
+    transform: scale(1.1);
+}
