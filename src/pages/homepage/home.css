@@ -91,3 +91,81 @@
   .EventSlider{
     margin: 7rem;
   }
+
+
+
+
+
+
+/* Container for overall content */
+.welcome-container {
+  text-align: center;
+  margin-bottom: 10vh;
+  margin-top: 7vh;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards; /* Smooth fade-in */
+}
+
+.welcome-text {
+  font-size: 3.5rem; /* Adjust font size to keep text in one line */
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 0.8rem;
+  background-color: #fff;
+  white-space: nowrap;  /* Prevent line breaks */
+  overflow: hidden;     /* Handle overflow elegantly */
+  text-overflow: ellipsis; /* Ellipsis for overflow handling */
+}
+
+.alumnimeet-text {
+  color: #146ef5;
+  display: inline;
+  padding-left: 5px;
+}
+
+.welcome-paragraph {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0;
+  padding: 0 1.5rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.3s; /* Delay for paragraph to appear after heading */
+}
+
+/* Button Hover effects (Already good, slightly refined) */
+.connect-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.08); /* Slightly bigger on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add more depth */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.EventSlider {
+  margin: 7rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 0.5s; /* EventSlider fades in after paragraph */
+}
+
+.cards-div {
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 1s; /* Cards fade in after slider */
+}
+
+
+
+  

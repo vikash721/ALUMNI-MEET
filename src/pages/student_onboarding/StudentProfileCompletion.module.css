@@ -1,0 +1,118 @@
+.profileCompletionContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profileCompletionTitle {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profileCompletionSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.progressBar {
+  position: relative;
+  height: 5px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 100%;
+  background: #0070f3;
+  border-radius: 4px;
+}
+
+.formSection {
+  margin-bottom: 30px;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #0070f3;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.textarea {
+  resize: none;
+  height: 100px;
+}
+
+.buttonContainer {
+  text-align: center;
+}
+
+.backButton,
+.nextButton,
+.submitButton {
+  background-color: #0070f3;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.backButton:hover,
+.nextButton:hover,
+.submitButton:hover {
+  background-color: #005bb5;
+}
+
+.newCollegeForm {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.newCollegeForm .label {
+  margin-bottom: 10px;
+}

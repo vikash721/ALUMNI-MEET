@@ -1,42 +1,77 @@
-/* EventSlider.module.css */
-
 .eventSliderContainer {
-    width: 100%;
-    max-width: 55vw; 
-    margin: 0 auto;
-  }
-  
-  .eventSlide {
-    position: relative;
-  }
-  
-  .eventImage {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images cover the container */
-  }
-  
-  .eventInfo {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .eventTitle {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  
-  .eventDate {
-    font-size: 1rem;
-    margin: 5px 0;
-  }
-  
-  .eventDescription {
-    font-size: 0.9rem;
-  }
-  
+  width: 100%;
+  max-width: 55vw;
+  margin: 0 auto;
+}
+
+.eventSlide {
+  position: relative;
+}
+
+.eventImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.eventInfo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.eventTitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.eventDate {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.eventDescription {
+  font-size: 0.9rem;
+}
+
+/* Custom arrow styles */
+.customArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+  color: #fff; /* White arrow color */
+  border-radius: 50%; /* Circular arrow button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.prevArrow {
+  left: 15px;
+}
+
+.nextArrow {
+  right: 15px;
+}
+
+.customArrow i {
+  font-size: 1.2rem; /* Font Awesome icon size */
+}
+
+/* Hover effect for arrows */
+.customArrow:hover {
+  background-color: #007bff; /* Professional blue color on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
