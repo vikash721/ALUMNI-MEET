@@ -3,6 +3,7 @@ import College from './pages/college/Collegepage';
 import CollegeProfile from './pages/college_profile/CollegeProfile';
 import Home from './pages/homepage/Home';
 import SignUpPage from './pages/signup/SingnUpPage';
+import Post from './components/Post/post';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
     {
       path: "/signup",
       element: <SignUpPage />,
+    },
+    {
+      path: "/test",
+      element: <Post />,
     },
   ]);
 
