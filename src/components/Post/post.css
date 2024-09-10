@@ -1,0 +1,101 @@
+.Container1{
+ width: 56vw;
+  height: 76vh;
+  background: white;
+  padding-left: 7vw;
+  padding-top: 3vh;
+  
+}
+.Container{
+  width: 100vw;
+  height: 100vh;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ ;
+}
+.top1{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+.top1 img{
+  width: 4vw;
+  height: 8vh;
+  border-radius: 50%;
+
+}
+.top1 p{
+  width: 40vw;
+  font-size: 22px;
+}
+.collage-name{
+    font-size: 13px;
+}
+.eventimage-container{
+ width: 36vw;
+  height: 33vh;
+  margin: 3vh 0vh;
+  border-radius: 15px;
+  margin-left: 3vw;
+  background: #88848442;
+}
+#RVSP button{
+  border: none;
+  background: #3f3fee;
+  border-radius: 5px;
+  width: 8vw;
+  height: 4vh;
+  color: white;
+  font-weight: 800;
+  font-size: 1vw;
+}
+.Event-details .div1{
+  font-size: 30px;
+  font-weight: 800;
+}
+.Event-details .div2{
+  width: 33vw;
+  overflow: auto;
+}
+/*.Event-details{
+  margin: 2vh 0px;
+  text-wrap: none;
+  width: 33vw;
+  height: 14vh;
+}*/
+.collage-name{
+  width: 33vw;
+}
+#p2{
+  font-size: 13px;
+}
+.Event-detail{
+  width: 33vw;
+  height: auto;
+  font-size: 27px;
+  margin-left: 3vw;
+  margin-bottom: 2vh;
+}
+.Event-detail p{
+  width: 36vw;
+  overflow: auto;
+  height: 6vh;
+}
+.button-container{
+  margin-left: 3vw;
+  display: flex;
+  gap: 3vw;
+}
+#More button{ 
+  border: none;
+  background: grey;
+  border-radius: 5px;
+  width: 8vw;
+  height: 4vh;
+  color: white;
+  font-weight: 800;
+  font-size: 1vw;
+}

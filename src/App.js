@@ -4,6 +4,7 @@ import College from './pages/college/Collegepage';
 import CollegeProfile from './pages/college_profile/CollegeProfile';
 import Home from './pages/homepage/Home';
 import SignUpPage from './pages/signup/SingnUpPage';
+import Post from './components/Post/post';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
@@ -29,8 +30,13 @@ function App() {
       element: <SignUpPage />,
     },
     {
+<<<<<<< HEAD
       path: "/pages/alumni",
       element: <AlumniProfile/>,
+=======
+      path: "/test",
+      element: <Post />,
+>>>>>>> cbbfab7f1fb26bef86e8d235af16dfecba65e701
     },
   ]);
 
