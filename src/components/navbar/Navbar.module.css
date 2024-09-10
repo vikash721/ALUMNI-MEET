@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.nav-container {
+.navContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,7 @@
     width: 70vw;
 }
 
-.navbar-left {
+.navbarLeft {
     display: flex;
     align-items: center;
 }
@@ -23,17 +23,17 @@
     margin-right: 20px;
 }
 
-.nav-links {
+.navLinks {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links li {
+.navLinks li {
     position: relative;
 }
 
-.nav-links li a {
+.navLinks li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -41,91 +41,25 @@
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.navLinks li a:hover {
     color: #0070f3;
 }
 
-.navbar-right {
+.navbarRight {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.user-icon {
-    color: #0070f3;
-    cursor: pointer;
-}
-
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-trigger {
-    cursor: pointer;
-    padding: 5px 10px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.dropdown-trigger:hover {
-    color: #0070f3;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    z-index: 1000;
-    display: none;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(10px);
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.dropdown-menu li {
-    list-style: none;
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    white-space: nowrap;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #0070f3;
-    color: #fff;
-}
-
-/* Active link styling */
-.nav-links li a.activelink {
-    color: #0070f3;
-}
-
-
-/* Existing styles remain the same... */
-
 /* User Dropdown Menu */
-.user-dropdown-container {
+.userDropdownContainer {
+    display: flex;
+    align-items: center;
     position: relative;
     cursor: pointer;
 }
 
-.user-dropdown-menu {
+.userDropdownMenu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -140,18 +74,18 @@
     display: none;
 }
 
-.user-dropdown-container:hover .user-dropdown-menu,
-.user-dropdown-container .user-dropdown-menu {
+.userDropdownContainer:hover .userDropdownMenu,
+.userDropdownContainer .userDropdownMenu {
     display: block;
     opacity: 1;
     transform: translateY(0);
 }
 
-.user-dropdown-menu li {
+.userDropdownMenu li {
     list-style: none;
 }
 
-.user-dropdown-menu li a {
+.userDropdownMenu li a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -160,7 +94,79 @@
     transition: background-color 0.3s ease;
 }
 
-.user-dropdown-menu li a:hover {
+.userDropdownMenu li a:hover {
     background-color: #0070f3;
     color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdownTrigger {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.dropdownTrigger:hover {
+    color: #0070f3;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdownMenu li {
+    list-style: none;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+/* Active link styling */
+.navLinks li a.activelink {
+    color: #0070f3;
+}
+
+/* Chat and Notification Icons */
+.iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    cursor: pointer;
+    color: #0070f3;
 }

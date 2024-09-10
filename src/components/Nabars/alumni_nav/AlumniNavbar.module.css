@@ -1,0 +1,172 @@
+.navbar {
+    border-bottom: 1.5px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    width: 70vw;
+}
+
+.navbarLeft {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks li {
+    position: relative;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+    color: #0070f3;
+}
+
+.navbarRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* User Dropdown Menu */
+.userDropdownContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.userDropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    display: none;
+}
+
+.userDropdownContainer:hover .userDropdownMenu,
+.userDropdownContainer .userDropdownMenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.userDropdownMenu li {
+    list-style: none;
+}
+
+.userDropdownMenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.userDropdownMenu li a:hover {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdownTrigger {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.dropdownTrigger:hover {
+    color: #0070f3;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdownMenu li {
+    list-style: none;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+/* Active link styling */
+.navLinks li a.activelink {
+    color: #0070f3;
+}
+
+/* Chat and Notification Icons */
+.iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    cursor: pointer;
+    color: #0070f3;
+}

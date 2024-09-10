@@ -1,4 +1,5 @@
 import './App.css';
+import AlumniProfile from './pages/alumni_profile/AlumniProfile';
 import College from './pages/college/Collegepage';
 import CollegeProfile from './pages/college_profile/CollegeProfile';
 import Home from './pages/homepage/Home';
@@ -26,6 +27,10 @@ function App() {
     {
       path: "/signup",
       element: <SignUpPage />,
+    },
+    {
+      path: "/pages/alumni",
+      element: <AlumniProfile/>,
     },
   ]);
 

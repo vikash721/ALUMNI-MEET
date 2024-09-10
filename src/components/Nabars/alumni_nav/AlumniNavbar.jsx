@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styles from './Navbar.module.css'; // Import the CSS module
-import Logo from "../../assets/logo.png";
+import styles from './AlumniNavbar.module.css'; // Import the CSS module
+import Logo from "../../../assets/logo.png";
 import { NavLink } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa'; // Import FontAwesome user icon
 
-const Navbar = () => {
+const AlumniNavbar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -65,9 +65,9 @@ const Navbar = () => {
                 </div>
             </nav>
 
-
+            
         </>
     );
 };
 
-export default Navbar;
+export default AlumniNavbar;
